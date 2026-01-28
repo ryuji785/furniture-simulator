@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.header {
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding-top: max(12px, env(safe-area-inset-top));
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.deleteBtn,
+.resetBtn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.deleteBtn {
+  color: white;
+  background: #ff6b6b;
+}
+
+.deleteBtn:active {
+  background: #ff5252;
+  transform: scale(0.95);
+}
+
+.resetBtn {
+  color: #333;
+  background: #e0e0e0;
+}
+
+.resetBtn:active {
+  background: #d0d0d0;
+  transform: scale(0.95);
+}
+
+.canvas-container {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.item-list-container {
+  height: 280px;
+  border-top: 1px solid #ddd;
+  padding-bottom: max(0, env(safe-area-inset-bottom));
+}
